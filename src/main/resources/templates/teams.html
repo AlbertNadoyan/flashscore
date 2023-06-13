@@ -52,7 +52,7 @@
                 <div class="card">
                     <img class="img-responsive" th:src="@{${teams.teamPlayerInfo.image}}" alt="John" style="width:100%">
                     <div class="">
-                        <h4><a th:text="${teams.teamPlayerInfo.name}" th:href="@{/team/teams.teamPlayerInfo.name}"></a></h4>
+                        <h4><a th:text="${teams.teamPlayerInfo.name}" th:href="@{/team/{id}(id=${teams.id})}"></a></h4>
                     </div>
                 </div>
             </div>

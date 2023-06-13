@@ -45,12 +45,12 @@
             <div class="container">
                <div class="col-md-3 column" th:each="leagues: ${league}">
                   <div class="card">
-                     <img class="img-responsive" src="/images/img-1-4.jpg" alt="John" style="width:100%">
+                     <img class="img-responsive" th:src="@{/leagues/getImage(fileImage=${leagues.logo})}" alt="John" style="width:100%; min-height: 253px">
                      <div class="">
                         <h4 th:text="${leagues.name}"></h4>
                         <p class="title" th:text="${leagues.country}"></p>
                         <p>
-                        <div class="center"><a th:href="@{/league/{leagueName}(leagueName=${leagues.name})}" class="buttonToHref" style="background: #1c72ce;
+                        <div class="center"><a th:href="@{/league/{teams}(teams=${leagues.id})}" class="buttonToHref" style="background: #1c72ce;
      color: #fff;
      border: none;
      padding: 6px 20px;
